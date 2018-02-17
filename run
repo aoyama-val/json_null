@@ -1,0 +1,26 @@
+#!/bin/sh
+
+echo "-----------------------------------"
+echo "Go"
+go run go/parse.go
+
+echo "-----------------------------------"
+echo "Ruby"
+ruby ruby/parse.rb
+
+echo "-----------------------------------"
+echo "Python"
+python python/parse.py
+rm -rf __pycache__
+
+echo "-----------------------------------"
+echo "Node"
+node node/parse.js
+
+echo "-----------------------------------"
+echo "Java"
+cd java
+export CLASSPATH=.:./jackson-core-2.9.4.jar:./jackson-databind-2.9.4.jar:./jackson-annotations-2.9.4.jar
+javac Parse.java
+java Parse
+rm -rf *.class
