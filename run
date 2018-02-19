@@ -20,7 +20,4 @@ node node/parse.js
 echo "-----------------------------------"
 echo "Java"
 cd java
-export CLASSPATH=.:./jackson-core-2.9.4.jar:./jackson-databind-2.9.4.jar:./jackson-annotations-2.9.4.jar
-javac Parse.java
-java Parse
-rm -rf *.class
+./run

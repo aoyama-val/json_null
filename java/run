@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+export CLASSPATH=.:./jackson-core-2.9.4.jar:./jackson-databind-2.9.4.jar:./jackson-annotations-2.9.4.jar:./json-20180130.jar
+javac Parse.java
+java Parse
+rm -rf *.class
